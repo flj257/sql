@@ -1,0 +1,149 @@
+
+	col 00 format A4
+    col DAY for a15
+	col 01 format A4
+	col 02 format A4
+	col 03 format A4
+	col 04 format A4
+	col 05 format A4
+	col 06 format A4
+	col 07 format A4
+	col 08 format A4
+	col 09 format A4
+	col 10 format A4
+	col 11 format A4
+	col 12 format A4
+	col 13 format A4
+	col 14 format A4
+	col 15 format A4
+	col 16 format A4
+	col 17 format A4
+	col 18 format A4
+	col 19 format A4
+	col 20 format A4
+	col 21 format A4
+	col 22 format A4
+	col 23 format A4
+	set linesize 200; 
+	set pagesize 200; 
+	SELECT 
+	to_char(first_time,'YYYY-MON-DD') day,
+	to_char(sum(decode(to_char(first_time,'HH24'),'00',1,0)),'999') "00",
+	to_char(sum(decode(to_char(first_time,'HH24'),'01',1,0)),'999') "01",
+	to_char(sum(decode(to_char(first_time,'HH24'),'02',1,0)),'999') "02",
+	to_char(sum(decode(to_char(first_time,'HH24'),'03',1,0)),'999') "03",
+	to_char(sum(decode(to_char(first_time,'HH24'),'04',1,0)),'999') "04",
+	to_char(sum(decode(to_char(first_time,'HH24'),'05',1,0)),'999') "05",
+	to_char(sum(decode(to_char(first_time,'HH24'),'06',1,0)),'999') "06",
+	to_char(sum(decode(to_char(first_time,'HH24'),'07',1,0)),'999') "07",
+	to_char(sum(decode(to_char(first_time,'HH24'),'08',1,0)),'999') "08",
+	to_char(sum(decode(to_char(first_time,'HH24'),'09',1,0)),'999') "09",
+	to_char(sum(decode(to_char(first_time,'HH24'),'10',1,0)),'999') "10",
+	to_char(sum(decode(to_char(first_time,'HH24'),'11',1,0)),'999') "11",
+	to_char(sum(decode(to_char(first_time,'HH24'),'12',1,0)),'999') "12",
+	to_char(sum(decode(to_char(first_time,'HH24'),'13',1,0)),'999') "13",
+	to_char(sum(decode(to_char(first_time,'HH24'),'14',1,0)),'999') "14",
+	to_char(sum(decode(to_char(first_time,'HH24'),'15',1,0)),'999') "15",
+	to_char(sum(decode(to_char(first_time,'HH24'),'16',1,0)),'999') "16",
+	to_char(sum(decode(to_char(first_time,'HH24'),'17',1,0)),'999') "17",
+	to_char(sum(decode(to_char(first_time,'HH24'),'18',1,0)),'999') "18",
+	to_char(sum(decode(to_char(first_time,'HH24'),'19',1,0)),'999') "19",
+	to_char(sum(decode(to_char(first_time,'HH24'),'20',1,0)),'999') "20",
+	to_char(sum(decode(to_char(first_time,'HH24'),'21',1,0)),'999') "21",
+	to_char(sum(decode(to_char(first_time,'HH24'),'22',1,0)),'999') "22",
+	to_char(sum(decode(to_char(first_time,'HH24'),'23',1,0)),'999') "23"
+	from
+	   v$log_history
+	where THREAD#=1
+	GROUP by 
+	   to_char(first_time,'YYYY-MON-DD')
+	ORDER by
+		to_char(first_time,'YYYY-MON-DD')
+	;
+
+
+
+col DAY format A11
+col 00 format 999
+col 01 format 999
+col 02 format 999
+col 03 format 999
+col 04 format 999
+col 05 format 999
+col 06 format 999
+col 07 format 999
+col 08 format 999
+col 09 format 999
+col 10 format 999
+col 11 format 999
+col 12 format 999
+col 13 format 999
+col 14 format 999
+col 15 format 999
+col 16 format 999
+col 17 format 999
+col 18 format 999
+col 19 format 999
+col 20 format 999
+col 21 format 999
+col 22 format 999
+col 23 format 999
+set lines 999; 
+set pages 999; 
+SELECT 
+to_char(first_time,'YYYY-MON-DD') day,
+to_char(sum(decode(to_char(first_time,'HH24'),'00',1,0)),'999') "00",
+to_char(sum(decode(to_char(first_time,'HH24'),'01',1,0)),'999') "01",
+to_char(sum(decode(to_char(first_time,'HH24'),'02',1,0)),'999') "02",
+to_char(sum(decode(to_char(first_time,'HH24'),'03',1,0)),'999') "03",
+to_char(sum(decode(to_char(first_time,'HH24'),'04',1,0)),'999') "04",
+to_char(sum(decode(to_char(first_time,'HH24'),'05',1,0)),'999') "05",
+to_char(sum(decode(to_char(first_time,'HH24'),'06',1,0)),'999') "06",
+to_char(sum(decode(to_char(first_time,'HH24'),'07',1,0)),'999') "07",
+to_char(sum(decode(to_char(first_time,'HH24'),'08',1,0)),'999') "08",
+to_char(sum(decode(to_char(first_time,'HH24'),'09',1,0)),'999') "09",
+to_char(sum(decode(to_char(first_time,'HH24'),'10',1,0)),'999') "10",
+to_char(sum(decode(to_char(first_time,'HH24'),'11',1,0)),'999') "11",
+to_char(sum(decode(to_char(first_time,'HH24'),'12',1,0)),'999') "12",
+to_char(sum(decode(to_char(first_time,'HH24'),'13',1,0)),'999') "13",
+to_char(sum(decode(to_char(first_time,'HH24'),'14',1,0)),'999') "14",
+to_char(sum(decode(to_char(first_time,'HH24'),'15',1,0)),'999') "15",
+to_char(sum(decode(to_char(first_time,'HH24'),'16',1,0)),'999') "16",
+to_char(sum(decode(to_char(first_time,'HH24'),'17',1,0)),'999') "17",
+to_char(sum(decode(to_char(first_time,'HH24'),'18',1,0)),'999') "18",
+to_char(sum(decode(to_char(first_time,'HH24'),'19',1,0)),'999') "19",
+to_char(sum(decode(to_char(first_time,'HH24'),'20',1,0)),'999') "20",
+to_char(sum(decode(to_char(first_time,'HH24'),'21',1,0)),'999') "21",
+to_char(sum(decode(to_char(first_time,'HH24'),'22',1,0)),'999') "22",
+to_char(sum(decode(to_char(first_time,'HH24'),'23',1,0)),'999') "23"
+from
+   v$log_history
+GROUP by 
+   to_char(first_time,'YYYY-MON-DD')
+ORDER by
+	to_char(first_time,'YYYY-MON-DD');
+
+
+
+------------------------------------
+select
+trunc(first_time) DAY, 
+trunc(first_time,'HH24') DATE_HOUR,
+count(*) LOG_SWITCHES
+from v$log_history 
+group by rollup( trunc(first_time) , trunc(first_time,'HH24') ) 
+order by 1,2;
+
+
+
+-----------------
+COL DAY FORMAT a15;
+COL HOUR FORMAT a4;
+COL TOTAL FORMAT 999;
+SELECT TO_CHAR(FIRST_TIME,'YYYY-MM-DD') DAY,
+TO_CHAR(FIRST_TIME,'HH24') HOUR,
+COUNT(*) TOTAL
+FROM V$LOG_HISTORY
+GROUP BY TO_CHAR(FIRST_TIME,'YYYY-MM-DD'),TO_CHAR(FIRST_TIME,'HH24')
+ORDER BY TO_CHAR(FIRST_TIME,'YYYY-MM-DD'),TO_CHAR(FIRST_TIME,'HH24')
+ASC;
